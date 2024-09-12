@@ -1,0 +1,258 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #eee;
+    background: linear-gradient(to right, rgba(76, 216, 255, 0.8), rgba(30, 108, 217, 0.8) ); /* Replace with your desired gradient colors */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 100vh;
+    background-image: 
+    linear-gradient(to right bottom, 
+   rgba(76, 216, 255, 0.8),
+   rgba(30, 108, 217, 0.8)),
+   url('https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg');
+    
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #212020;
+  font-size: 14px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    background-color: #f8f2f2;
+    border: 1px solid #00a9fe;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother animation */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #0b0b0b;
+}
+
+.product p {
+    font-size: 16px;
+    color: #0b0b0b;
+}
+
+.product a {
+    background-color: #2f9fdc;
+    color: rgb(248, 242, 242);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px; /* Rounded corners for button */
+    transition: background-color 0.3s ease; /* Smoother hover effect */
+}
+
+.product a:hover {
+    background-color: #17466c;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Ensure 3 products per row on mobile */
+@media (max-width: 768px) {
+    .product {
+        width: 30%;
+        margin: 5px;
+    }
+}
+
+a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.list-item {
+    background-color: #fff;
+    border: 1px solid #74bff4;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Adjust as needed for horizontal layout */
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.list-item p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.list-item button {
+    background-color: #00a9fe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.list-item button:hover {
+    background-color:#0056b3;
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    border-radius: 5px;
+}
+
+.details-link:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .list-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-item {
+        width: 90%; /* Full width on small screens */
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .list-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        width: 30%; /* Adjust as needed for horizontal layout */
+    }
+}
+
+.pantek {
+    font-size: 30px;
+}
+
+.pantek-pukimak {
+    text-align: center;
+    color: #000000;
+    font-style:inherit;
+}
